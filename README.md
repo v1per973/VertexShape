@@ -21,9 +21,3 @@ VertexShape is a browser-based 3D OBJ viewer built with Three.js. It loads `.obj
   - Positions labels in 2D screen space aligned with the corresponding edges
   - Toggles the grid only when a model is loaded
   - Continuously renders the scene, updating labels and allowing orbit controls
-
-## Online Hosting
-The project is fully static and can be deployed via GitHub Pages:
-1. Upload all files to a GitHub repository
-2. Enable **Pages** in repository settings (`main` branch, root folder)
-3. Access via:
