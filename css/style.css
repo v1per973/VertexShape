@@ -1,0 +1,68 @@
+:root {
+  --bg:#0b0f14;
+  --text:#e7eef7;
+  --accent:#7aa2ff;
+}
+
+* { box-sizing:border-box; }
+
+html, body {
+  margin:0; height:100%;
+  background:var(--bg); color:var(--text);
+  font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+#viewer, #labelLayer {
+  position:absolute; inset:0;
+}
+#labelLayer { pointer-events:none; }
+
+#toolbar {
+  position:fixed; top:0; left:0; right:0; z-index:30;
+  display:flex; align-items:center; gap:.5rem; padding:.5rem .75rem;
+  background:transparent !important; border:none !important; box-shadow:none !important; backdrop-filter:none !important;
+  pointer-events:none;
+}
+#toolbar > * { pointer-events:auto; }
+#toolbar .right { margin-left:auto; display:flex; gap:.35rem; align-items:center; }
+
+.btn {
+  cursor:pointer; background:rgba(16,26,45,.85); color:#e7eef7;
+  border:1px solid #1f2a40; border-radius:10px;
+  padding:.45rem .8rem; font-size:14px;
+  transition:transform .08s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover { background:rgba(19,33,58,.95); box-shadow:0 6px 16px rgba(0,0,0,.25); transform:translateY(-1px); }
+.btn:active{ transform:translateY(0); box-shadow:none; }
+
+.filename{
+  font:14px/1.2 ui-monospace,Menlo,Consolas,monospace;
+  color:#cfe3ff; opacity:.9; padding:.25rem .5rem;
+  border:1px dashed #1f2a40; border-radius:8px; background:rgba(16,26,45,.6);
+}
+
+.badge {
+  background:rgba(13,26,48,.65);
+  border:1px solid #1f2a40;
+  border-radius:999px; padding:.1rem .45rem; color:#cfe3ff;
+  font-size:12px;
+}
+
+.label {
+  pointer-events:none; transform:translate(-50%,-50%);
+  background:rgba(17,24,39,.92); color:#e5e7eb;
+  border:1px solid #334155; border-radius:6px;
+  padding:2px 6px; font:12px/1.2 ui-monospace,Menlo,Consolas,monospace;
+  white-space:nowrap; opacity:0; animation:fadeIn .25s ease forwards;
+}
+
+.urlbox{
+  width:min(42vw,520px);
+  background:rgba(16,26,45,.6);
+  color:#e7eef7;
+  border:1px solid #1f2a40; border-radius:10px;
+  padding:.45rem .6rem; font-size:14px;
+  outline:none;
+}
+
+@keyframes fadeIn { to{ opacity:1; transform:translate(-50%,-50%) scale(1); } }

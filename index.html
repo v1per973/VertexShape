@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>VertexShape</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div id="toolbar">
+    <input id="file" type="file" accept=".obj" hidden />
+    <button id="btnChoose" class="btn">Load OBJ</button>
+    <span id="fileLabel" class="filename">–</span>
+    <span style="margin-left:auto">
+      <span class="badge"><span id="edgeCount">0</span> edges</span>
+      <span class="badge">BB <span id="bbSize">–</span></span>
+    </span>
+  </div>
+
+  <div id="viewer"></div>
+  <div id="labelLayer"></div>
+
+  <script src="libs/three.min.js"></script>
+  <script src="libs/OrbitControls.js"></script>
+  <script src="libs/CSS2DRenderer.js"></script>
+  <script src="libs/OBJLoader.js"></script>
+  <script src="js/viewer.js"></script>
+</body>
+</html>
